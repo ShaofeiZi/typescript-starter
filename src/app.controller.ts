@@ -1,9 +1,11 @@
-import { Get, Controller } from '@nestjs/common';
+import {Get, Controller, Res} from '@nestjs/common';
+import {HttpCode} from '@nestjs/common/utils/decorators/http-code.decorator';
 
 @Controller()
 export class AppController {
-  @Get()
-  root(): string {
-    return 'Hello World!';
-  }
+    @Get()
+    // @HttpCode(208)
+    root(): string {
+        return `Hello World!`;
+    }
 }
